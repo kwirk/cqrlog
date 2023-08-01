@@ -2421,8 +2421,7 @@ begin
                     if UploadAll then
                       frmLogUploadStatus.UploadDataToUDPLog(UploadAll)
                     else begin
-                      // TODO: SHOULD DEFAULT False
-                      if cqrini.ReadBool('OnlineLog','UdUpOnline',True) then
+                      if cqrini.ReadBool('OnlineLog','UdUpOnline',False) then
                         frmLogUploadStatus.UploadDataToUDPLog
                     end;
                     tmrUploadAll.Enabled := False;
